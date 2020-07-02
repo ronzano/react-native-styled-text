@@ -1,24 +1,42 @@
 {
-  "name": "react-native-styled-text-ex",
-  "version": "1.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest --coverage --watchAll"
-  },
-  "dependencies": {
-    "react": "16.8.3",
-    "react-native": "0.59.9"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/runtime": "^7.4.5",
-    "babel-jest": "^24.8.0",
-    "jest": "^24.8.0",
-    "metro-react-native-babel-preset": "^0.54.1",
-    "react-test-renderer": "16.8.3"
-  },
-  "jest": {
-    "preset": "react-native"
+	"name": "react-native-styled-text",
+	"version": "1.0.1",
+	"description": "A React Native component for easy rendering of styled text.",
+	"main": "./index.js",
+	"scripts": {
+	  "test": "jest --watchAll"
+	},
+	"repository": {
+	  "type": "git",
+	  "url": "git+https://github.com/fram-x/react-native-styled-text.git"
+	},
+	"keywords": [
+		"react-native",
+		"style",
+		"styling",
+		"format",
+		"formatting",
+		"text",
+		"mixed",
+		"font",
+		"bold",
+		"italic",
+		"color",
+		"html",
+		"css",
+		"nested"
+	  ],
+	"author": "Bjørn Egil Hansen",
+	"license": "MIT",
+	"bugs": {
+	  "url": "https://github.com/fram-x/react-native-styled-text/issues"
+	},
+	"homepage": "https://github.com/fram-x/react-native-styled-text#readme",
+	"dependencies": {
+	  "prop-types": "*"
+	},
+	"peerDependencies": {
+	  "react": "*",
+	  "react-native": "*"
+	}
   }
-}
