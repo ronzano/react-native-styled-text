@@ -18,12 +18,15 @@ const defaultStyles = {
 
 const renderMixedText = (mixedText: Mixed, textStyles: Object) => mixedText.map((element, index) => (
   typeof element === 'string' || element === undefined || element === null
-    ? element
+    ? React.createElement(Text, {
+      key: index
+    },
+      element)
     : React.createElement(
       Text,
-      { 
-        style: textStyles[element.styleName] || defaultStyles[element.styleName], 
-        key: index 
+      {
+        style: textStyles[element.styleName] || defaultStyles[element.styleName],
+        key: index
       },
       renderMixedText(element.mixedText, textStyles),
     )
@@ -39,7 +42,7 @@ export const renderStyledText = (children, textStyles, textProps) => {
   const textElements = renderMixedText(mixedText, styles);
 
   return React.createElement(
-    Text,
+    View,
     textProps,
     ...textElements,
   );
